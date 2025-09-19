@@ -1,0 +1,9 @@
+.btns-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.forms-container{
+    padding: 10px;
+    
+}
