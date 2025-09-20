@@ -74,6 +74,8 @@ function Main() {
           confirmPassword: "",
         })
     }
+
+    //main
     
   return (
     <div>
