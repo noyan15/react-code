@@ -1,19 +1,19 @@
 import React from 'react'
 
-function PhaseOne() {
+function PhaseOne({data,handleChange}) {
   return (
     <form>
         <label>Full Name</label>
-        <input type="text" placeholder="Enter your name" />
+        <input value={data.fullName} onChange={handleChange} name='fullName' type="text" placeholder="Enter your name" />
         <br />
         <label>Email</label>
-        <input type="number" placeholder="Enter your age" />
+        <input value={data.email} onChange={handleChange} name='email' type="email" placeholder="Enter your age" />
         <br />
         <label>Phone Number</label>
-        <input type="text" placeholder="Enter your city" />
+        <input value={data.phoneNumber} onChange={handleChange} name='phoneNumber' type="text" placeholder="Enter your city" />
         <br />
         <label>Date of Brrth</label>
-        <input type="date" placeholder="Enter your city" />
+        <input value={data.dateOfBirth} onChange={handleChange} name='dateOfBirth' type="date" placeholder="Enter your city" />
         <br />
       </form>
   )
