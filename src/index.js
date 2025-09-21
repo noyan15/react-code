@@ -1,21 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import Dashboard from './pages/dashboard';
-import NewPage from './pages/NewPage'
-import StudentManagement from './pages/StudentManagement';
-import Main from './pages/conditionalRendering/Main';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import Dashboard from "./pages/dashboard";
+import NewPage from "./pages/NewPage";
+import StudentManagement from "./pages/StudentManagement";
+import Main from "./pages/conditionalRendering/Main";
+import { BrowserRouter } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    {/* <Dashboard /> */}
-    {/* <NewPage /> */}
-    {/* <StudentManagement /> */}
-    <Main />
+    <BrowserRouter>
+      {/* <App /> */}
+      {/* <Dashboard /> */}
+      {/* <NewPage /> */}
+      {/* <StudentManagement /> */}
+      <Main />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

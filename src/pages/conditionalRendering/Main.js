@@ -4,6 +4,7 @@ import PhaseTwo from "./PhaseTwo";
 import PhaseThree from "./PhaseThree";
 import "./main.css";
 import ShowData from "./ShowData";
+import {Routes,Route} from "react-router-dom";
 
 function Main() {
     const [activePhase,setActivePhase] = useState(1);
@@ -80,18 +81,14 @@ function Main() {
   return (
     <div>
       <h1>Main</h1>
-      <div className="btns-container">
-        <button onClick={handleBack}>Back</button>
-        <button onClick={Reset}>
-          Reset Form
-        </button>
-        {
-          activePhase === 3 ? <button onClick={Submit}>Submit</button> : <button onClick={handleNext}>Next</button>
-        }
-        
-      </div>
+      
       <div className="forms-container">
-        {
+        <Routes>
+          <Route path='/' element={<PhaseOne data={formData} handleChange={handleChange} Reset={Reset} />} />
+          <Route path='/phase2' element={<PhaseTwo data={formData} handleChange={handleChange} Reset={Reset} />} />
+          <Route path='/phase3' element={<PhaseThree data={formData} handleChange={handleChange} Submit={Submit} Reset={Reset} />} />
+        </Routes>
+        {/* {
             activePhase === 1 && <PhaseOne data={formData} handleChange={handleChange} />
         }
         {
@@ -99,7 +96,7 @@ function Main() {
         }
         {
             activePhase === 3 && <PhaseThree data={formData} handleChange={handleChange} />
-        }
+        } */}
         {/* <PhaseOne />
         
         <PhaseTwo />

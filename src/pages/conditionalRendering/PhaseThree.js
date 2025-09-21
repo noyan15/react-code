@@ -1,7 +1,19 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
-export default function PhaseThree({data,handleChange}) {
+export default function PhaseThree({data,handleChange,Submit,Reset}) {
+  const navigate = useNavigate();
+  function handleBack() {
+    navigate("/phase2");
+  }
   return (
+    <>
+    <div className="btns-container">
+        <button onClick={handleBack}>Back</button>
+        <button onClick={Reset}>Reset Form</button>
+        <button onClick={Submit}>Submit</button>
+      </div>
+    
     <form>
       <label>
         UserName
@@ -19,5 +31,6 @@ export default function PhaseThree({data,handleChange}) {
       <input value={data.confirmPassword} onChange={handleChange} name='confirmPassword' type="password" placeholder="Enter your password" />
       <br />
     </form>
+    </>
   )
 }
