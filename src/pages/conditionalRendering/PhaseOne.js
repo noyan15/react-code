@@ -5,7 +5,7 @@ function PhaseOne({ data, handleChange, Reset }) {
   const navigate = useNavigate();
 
   function handleNext() {
-    navigate("/phase2");
+    navigate("/dashboard/phase2");
   }
   return (
     <div>

@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 function PhaseTwo({ data, handleChange, Reset }) {
   const navigate = useNavigate();
   function handleNext() {
-    navigate("/phase3");
+    navigate("/dashboard/phase3");
   }
   function handleBack() {
-    navigate("/");
+    navigate("/dashboard");
   }
   return (
     <>

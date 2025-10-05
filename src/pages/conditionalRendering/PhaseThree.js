@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 export default function PhaseThree({data,handleChange,Submit,Reset}) {
   const navigate = useNavigate();
   function handleBack() {
-    navigate("/phase2");
+    navigate("/dashboard/phase2");
   }
   return (
     <>

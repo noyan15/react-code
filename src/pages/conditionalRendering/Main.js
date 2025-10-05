@@ -82,7 +82,7 @@ function Main() {
     <div>
       <h1>Main</h1>
       
-      <div className="forms-container">
+      <div className="forms-container bg-black">
         <Routes>
           <Route path='/' element={<PhaseOne data={formData} handleChange={handleChange} Reset={Reset} />} />
           <Route path='/phase2' element={<PhaseTwo data={formData} handleChange={handleChange} Reset={Reset} />} />

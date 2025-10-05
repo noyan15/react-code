@@ -8,16 +8,15 @@ import NewPage from "./pages/NewPage";
 import StudentManagement from "./pages/StudentManagement";
 import Main from "./pages/conditionalRendering/Main";
 import { BrowserRouter } from "react-router-dom";
+import Login from "./components/auth/login";
+import Signup from "./components/auth/signup";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      {/* <App /> */}
-      {/* <Dashboard /> */}
-      {/* <NewPage /> */}
-      {/* <StudentManagement /> */}
-      <Main />
+      <App />
+      
     </BrowserRouter>
   </React.StrictMode>
 );

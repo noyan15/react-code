@@ -1,40 +1,24 @@
 import React from 'react';
 import './App.css';
-import StudentBox from './components/StudentBox';
+import { Routes, Route } from 'react-router-dom';
+import Login from './components/auth/login';
+import Signup from './components/auth/signup';
+import LandingPage from './routingProject/LandingPage';
+import Dashboard from './routingProject/Dashboard';
+import Cart from './routingProject/Cart';
 
 function App() {
+  const products = [{id: 1, title: 'Product 1', quantity: 1, description: 'This is product 1'}, {id: 2, title: 'Product 2', quantity: 1, description: 'This is product 2'}, {id: 3, title: 'Product 3', quantity: 1, description: 'This is product 3'}, {id: 4, title: 'Product 4', quantity: 1, description: 'This is product 4'}];
+  const [cart,setCart] = React.useState([]);
   return (
-    <div>
-      <header>
-        <h1>Logo</h1>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-        <div>
-          <button>Login</button>
-          <button>Sign Up</button>
-        </div>
-      </header>
-      <main>
-        <form>
-          <label>Student Name</label>
-          <input type="text" placeholder="Enter your name" />
-          <br />
-          <label>Age</label>
-          <input type="number" placeholder="Enter your age" />
-          <br />
-          <label>City</label>
-          <input type="text" placeholder="Enter your city" />
-          <br />
-          <button type="submit">Submit</button>
-        </form>
-      </main>
-      <footer>
-        <p>© 2024 Your Company</p>
-      </footer>
-    </div>
+    <Routes>
+      <Route path='/' element={<LandingPage/>} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/dashboard" element={<Dashboard products={products} cart={cart} setCart={setCart} />} />
+      <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
+      <Route path='*' element={<h1>404 Not Found</h1>} />
+    </Routes>
   );
 }
 
